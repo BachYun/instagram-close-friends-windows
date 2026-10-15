@@ -1,0 +1,94 @@
+name: Windows bug report
+description: Report a reproducible problem in the Windows-only helper.
+title: "[Windows bug]: "
+labels: [bug]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Do not upload personal account files, browser profiles, passwords, codes, cookies,
+        tokens, HAR files, or full network responses. Use existing evidence; do not keep
+        retrying an Instagram restriction to produce a log. Native Windows validation is
+        still pending for this beta. See the Known Issues and Security documents first.
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Before reporting
+      options:
+        - label: I searched existing issues and read the troubleshooting guide.
+          required: true
+        - label: I removed account secrets and private follower data from this report.
+          required: true
+  - type: input
+    id: helper-version
+    attributes:
+      label: Helper version
+      placeholder: "Output of close_friends_csv.py --version"
+    validations:
+      required: true
+  - type: input
+    id: windows-version
+    attributes:
+      label: Windows version and build
+      placeholder: "Copy version/build from winver; do not include user or device names."
+    validations:
+      required: true
+  - type: dropdown
+    id: architecture
+    attributes:
+      label: Windows architecture
+      options: [x64, ARM64, Other or unknown]
+    validations:
+      required: true
+  - type: dropdown
+    id: virtualization
+    attributes:
+      label: Where Windows runs
+      options: [Physical Windows PC, Parallels virtual machine, VMware virtual machine, Other virtual machine, GitHub Actions]
+    validations:
+      required: true
+  - type: input
+    id: python-version
+    attributes:
+      label: Python version
+      placeholder: "Output from the project's Windows Python, not the Mac Python."
+    validations:
+      required: true
+  - type: input
+    id: browser-version
+    attributes:
+      label: Chrome version
+      placeholder: "Version number only, or not applicable for an offline issue."
+  - type: dropdown
+    id: phase
+    attributes:
+      label: Failing stage
+      options: [Installation, Offline status or import, Chrome launch, Browser connection, Preview or search, Approved addition, Manual-refresh verification, Publishing, GitHub Actions, Other]
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce and command
+      description: Use placeholders instead of real usernames or private filesystem paths.
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual behavior and a short redacted error
+      description: Do not paste a complete session log or request/response payload.
+    validations:
+      required: true
+  - type: dropdown
+    id: normal-browser
+    attributes:
+      label: Does the same operation work manually in the connected Windows Chrome?
+      description: Report what you already observed. No extra attempts are required.
+      options: ["Yes", "No", "Not checked", "Not applicable"]

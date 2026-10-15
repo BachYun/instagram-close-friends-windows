@@ -1,0 +1,44 @@
+name: Windows setup help
+description: Ask about installation, Python, PowerShell, Chrome, or offline reports.
+title: "[Windows setup]: "
+labels: [question]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        First read README and docs/TROUBLESHOOTING.md. Only Windows usage is supported
+        here. Publishing the source from a Mac is separate from running the helper.
+        Never include credentials, browser state, follower lists, or raw account exports.
+  - type: input
+    id: versions
+    attributes:
+      label: Windows, architecture, Python, and helper versions
+      placeholder: "Windows build; x64/ARM64; Python version; helper --version"
+    validations:
+      required: true
+  - type: dropdown
+    id: step
+    attributes:
+      label: Setup step
+      options: [Getting the ZIP, Installing Python, Creating the virtual environment, Installing dependencies, Launching Chrome, Connecting to Chrome, Opening a CSV report, GitHub publication, Other]
+    validations:
+      required: true
+  - type: textarea
+    id: command
+    attributes:
+      label: Command and redacted result
+      description: Replace your private folder path and account name with placeholders.
+    validations:
+      required: true
+  - type: textarea
+    id: tried
+    attributes:
+      label: What you already checked
+      description: Do not retry account restrictions just to add evidence.
+  - type: checkboxes
+    id: privacy
+    attributes:
+      label: Privacy
+      options:
+        - label: I have not included passwords, codes, cookies, tokens, profiles, or actual follower data.
+          required: true

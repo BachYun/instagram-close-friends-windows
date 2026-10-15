@@ -1,0 +1,11 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Known issues and validation status
+    url: https://github.com/BachYun/instagram-close-friends-windows/blob/main/docs/KNOWN_ISSUES.md
+    about: Check documented limitations before opening an issue.
+  - name: Windows troubleshooting
+    url: https://github.com/BachYun/instagram-close-friends-windows/blob/main/docs/TROUBLESHOOTING.md
+    about: Python, PowerShell, Chrome, CSV, and connection problems.
+  - name: Security and private reports
+    url: https://github.com/BachYun/instagram-close-friends-windows/security/policy
+    about: Read the security policy. Never post credentials or session material in public.

@@ -1,0 +1,39 @@
+name: Windows feature request
+description: Suggest a Windows usability or reliability improvement.
+title: "[Windows feature]: "
+labels: [enhancement]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        This is a local Windows helper, not a service or private-API login bot.
+        Requests for CAPTCHA bypass, restriction evasion, automatic re-clicks of uncertain
+        selections, or removal of confirmation safeguards are outside the project's scope.
+  - type: textarea
+    id: problem
+    attributes:
+      label: What problem would this solve?
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed behavior
+    validations:
+      required: true
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives considered
+  - type: textarea
+    id: safeguards
+    attributes:
+      label: Privacy and verification considerations
+      description: Explain how the change preserves account isolation and uncertain-selection handling.
+  - type: checkboxes
+    id: scope
+    attributes:
+      label: Scope
+      options:
+        - label: This request is for the Windows tool and does not require bypassing Instagram restrictions.
+          required: true
